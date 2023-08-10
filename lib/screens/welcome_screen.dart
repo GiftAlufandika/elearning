@@ -15,14 +15,14 @@ class WelcomeScreen extends StatelessWidget {
               children: [
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height / 1.6,
+                  height: MediaQuery.of(context).size.height / 2.0,
                   decoration: BoxDecoration(
                     color: Colors.white,
                   ),
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height / 1.6,
+                  height: MediaQuery.of(context).size.height / 2.0,
                   decoration: BoxDecoration(
                     color: Color(0xFF674AEF),
                     borderRadius:
@@ -41,7 +41,7 @@ class WelcomeScreen extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 2.666,
+                height: MediaQuery.of(context).size.height / 2.0,
                 decoration: BoxDecoration(
                   color: Color(0xFF674AEF),
                 ),
@@ -51,7 +51,7 @@ class WelcomeScreen extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: Container(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height / 2.666,
+                height: MediaQuery.of(context).size.height / 2.0,
                 padding: EdgeInsets.only(top: 48, bottom: 30),
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -83,7 +83,7 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                       ),
                     ),
-                    SizedBox(height: 60),
+                    SizedBox(height: 40),
                     Material(
                       color: Color(0xFF674AEF),
                       borderRadius: BorderRadius.circular(10),
@@ -94,7 +94,7 @@ class WelcomeScreen extends StatelessWidget {
                         },
                         child: Container(
                           padding: EdgeInsets.symmetric(
-                            vertical: 15, horizontal: 80
+                            vertical: 15, horizontal: 60
                           ),
                           child: Text(
                             "Get Started",

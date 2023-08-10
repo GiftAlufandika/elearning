@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
 
+import '../screens/home_screen.dart';
+import 'package:flutter/material.dart';
+
 import '../widgets/description_section.dart';
 import '../widgets/lessons_secttion.dart';
 import '../widgets/subjects_section.dart';
 
-class CoursesScreen extends StatefulWidget {
+class LessonViewSection extends StatefulWidget {
   String img;
-  CoursesScreen(this.img);
+  LessonViewSection(this.img);
   @override
-  State<CoursesScreen> createState() => _CoursesScreen();
+  State<LessonViewSection> createState() => _LessonsViewSection();
 }
 
-class _CoursesScreen extends State<CoursesScreen> {
+class _LessonsViewSection extends State<LessonViewSection> {
   bool isLessonSection = true;
   @override
   Widget build(BuildContext context) {
@@ -149,6 +152,136 @@ class _CoursesScreen extends State<CoursesScreen> {
             ),
             SizedBox(height: 10),
             isLessonSection ? LessonSection() : DescriptionSection(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class LessonsViewSection extends StatelessWidget {
+  List objecivesList =[
+    'Define localised ions',
+    'Define delocalised electrons',
+    'Describing metallic bonding',
+    'Explaining the bonding in metals'
+
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: Stack(
+          children: [
+            Align(
+              alignment: Alignment.center,
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 2.0,
+                padding: EdgeInsets.only(top: 20, bottom: 30),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(70),
+                  ),
+                ),
+                child: Column(
+                  children: [
+                    Text(
+                      "Objectives",
+                      textAlign:TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 1,
+                        wordSpacing: 2,
+                      ),
+                    ),
+                    SizedBox(height: 15),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 40),
+                      child: Text(
+                        "Define localized ions.",
+                        textAlign:TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.black.withOpacity(0.6),
+                        ),
+                      ),
+
+                    ),
+                    SizedBox(height: 15),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 40),
+                      child: Text(
+                        "Define delocalized electrons.",
+                        textAlign:TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.black.withOpacity(0.6),
+                        ),
+                      ),
+
+                    ),
+                    SizedBox(height: 15),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 40),
+                      child: Text(
+                        "Describing metallic bonding.",
+                        textAlign:TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.black.withOpacity(0.6),
+                        ),
+                      ),
+
+                    ),
+                    SizedBox(height: 15),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 40),
+                      child: Text(
+                        "Explaining the bonding in metals.",
+                        textAlign:TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Colors.black.withOpacity(0.6),
+                        ),
+                      ),
+
+                    ),
+
+
+                    SizedBox(height: 40),
+                    Material(
+                      color: Color(0xFF674AEF),
+                      borderRadius: BorderRadius.circular(10),
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()
+                          ));
+                        },
+                        child: Container(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 15, horizontal: 60
+                          ),
+                          child: Text(
+                            "Lets see introduction",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 22,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
